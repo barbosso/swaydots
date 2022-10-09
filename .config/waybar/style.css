@@ -1,0 +1,66 @@
+* {
+        border: none;
+        border-radius: 0;
+        font-family: TerminessTTF Nerd Font;
+        font-size: 16px;
+        text-shadow: none;
+        box-shadow:    none;
+        transition-duration: 0s;
+        color: #c0caf5;
+        background-color: #414868;
+}
+
+window {
+        font-weight:    bold;
+        color:          #d5c4a1;
+        background:     transparent;
+}
+
+#workspaces button {
+        padding: 0 5px;
+        background: #414868;
+        padding: 2px;
+}
+
+#workspaces button.visible {
+        background: #414868;
+}
+
+#workspaces button.focused {
+        background: #c0caf5;
+}
+
+#workspaces button.unfocused {
+        background: #414868;
+}
+
+#pulseaudio, #cpu, #network, #clock, #battery{
+        padding: 0px 5px;
+}
+#language{
+        padding-left: 5px;
+}
+
+
+#network{
+}
+
+#network.disconnected {
+        color: red;
+}
+
+#battery {
+        color: green;
+}
+
+#battery.critical {
+        color: red;
+}
+
+#battery.good {
+        color: green;
+}
+
+#battery.charging {
+        color: green;
+}

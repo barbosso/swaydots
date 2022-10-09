@@ -1,0 +1,64 @@
+{
+    "spacing": 15,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["custom/weather", "custom/HTB", "custom/wg", "sway/language", "tray", "pulseaudio", "network", "clock"],
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+        "timezone": "Europe/Moscow",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click-right": "foot nmtui"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        // install pulseaudio-control "yay -S pulseaudio-control" or "https://github.com/marioortizmanero/polybar-pulseaudio-control"
+        "on-click": "pulseaudio-control togmute",
+        "on-click-right": "pulseaudio-control --node-blacklist 'alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2' next-node",
+        "on-click-middle": "pavucontrol"
+    },
+    "tray": {
+        "icon-size": 24,
+        "spacing": 10
+    },
+    "custom/wg": {
+        "format": "[{}]",
+        "exec": "bash ~/.config/waybar/scripts/wg.sh status",
+        "on-click": "bash ~/.config/waybar/scripts/wg.sh connect",
+        "return-type": "text",
+        "interval": 5
+    },
+    "custom/weather": {
+        "format": "[{}]",
+        "exec": "curl 'https://wttr.in/?format=3'",
+        "interval": 3600
+    },
+    "custom/HTB": {
+        "format": "[HTB:{}]",
+        "exec": "ip addr show tun0 | grep 'inet' | awk '{print $2}' | cut -d/ -f1 | head -1",
+        "on-click": "ip addr show tun0 | grep 'inet' | awk '{print $2}' | cut -d/ -f1 | head -1 | wl-copy",
+        "interval": 30,
+        "return-type": "text"
+    }
+
+}
+
+
