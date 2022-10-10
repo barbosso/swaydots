@@ -16,6 +16,7 @@ set $term alacritty
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/gg/.config/wallpapers/wallpapers.jpg fill
+exec mako
 
 output X11-1 {
     resolution 1920x1080
@@ -46,6 +47,9 @@ input "7247:132:LIZHI_Flash_IC_USB_Keyboard" {
 
     # Start your launcher
     bindsym $mod+d exec $HOME/.config/sway/scripts/launcher
+
+    # Time
+    bindsym F12 exec notify-send "  $(date +%I:%M)"
 	
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
