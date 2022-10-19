@@ -1,10 +1,27 @@
 {
-    "spacing": 10,
+    "spacing": 20,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/weather", "custom/HTB", "custom/wg", "sway/language", "tray", "pulseaudio", "network", "clock"],
+    "modules-right": ["custom/HTB", "custom/wg", "sway/language", "tray", "pulseaudio", "network", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/workspaces": {
+        "format": "{name}: {icon}",
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format-icons": {
+            "1": "  ",
+            "2": "  ",
+            "3": "  ",
+            "4": "  ",
+            "5": "  ",
+            "6": "  ",
+            "7": "  ",
+            "8": "  ",
+            "9": "  ",
+            "10": "  "
+        }
     },
     "clock": {
         "timezone": "Europe/Moscow",
@@ -55,10 +72,8 @@
         "format": "[HTB:{}]",
         "exec": "bash ~/.config/waybar/scripts/tun.sh",
         "on-click": "ip addr show tun0 | grep 'inet' | awk '{print $2}' | cut -d/ -f1 | head -1 | wl-copy",
-        "interval": 30,
+        "interval": 300,
         "return-type": "text"
     }
 
 }
-
-

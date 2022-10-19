@@ -41,6 +41,7 @@ input "7247:132:LIZHI_Flash_IC_USB_Keyboard" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym --to-code $mod+Shift+f exec firefox
 
     # Kill focused window
     bindsym --to-code $mod+Shift+q kill
@@ -190,6 +191,8 @@ hide_edge_borders --i3 smart
 
 for_window [app_id="mpv"] floating enable, resize set 950 530
 for_window [app_id="Pcmanfm"] floating enable
+for_window [class="firefox"] fullscreen enable
+for_window [class="Yandex-browser"] fullscreen enable
 
 
 client.focused #a2a2d0 #a2a2d0 #414868
