@@ -15,7 +15,7 @@ set $term foot
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/gg/.config/wallpapers/wallpapers.jpg fill
+output * bg /home/gg/.config/wallpapers/gradient.png fill
 exec mako
 
 output X11-1 {
