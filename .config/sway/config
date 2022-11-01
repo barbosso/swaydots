@@ -35,6 +35,21 @@ input "7247:132:LIZHI_Flash_IC_USB_Keyboard" {
     xkb_options grp:alt_shift_toggle
 }
 
+
+
+#### Set gtk theme
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme "Catppuccin-Mocha"
+    gsettings set $gnome-schema icon-theme "Breeze Chameleon Dark"
+    gsettings set $gnome-schema font-name "TerminessTTF Nerd Font Mono 14"
+}
+
+
+
+
+
 ### Key bindings
 #
 # Basics:

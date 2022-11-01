@@ -1,10 +1,13 @@
 {
     "spacing": 20,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": [],
     "modules-right": ["custom/HTB", "custom/wg", "sway/language", "tray", "pulseaudio", "network", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+    	"max-length": 40
     },
     "sway/workspaces": {
         "format": "{name}: {icon}",
