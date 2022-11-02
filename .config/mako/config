@@ -1,23 +1,19 @@
 layer=overlay
-background-color=#414868
+font=TerminessTTF Nerd Font 14
+# Colors
 
-# Timeout
-default-timeout=5000
-ignore-timeout=1
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#89b4fa
+progress-color=over #313244
 
-# Text
-format=<span font="TerminessTTF Nerd Font 24" line_height=".01" rise="5pt" color="#c0caf5">%s</span>n%b
-
-#text-aligment=center
+[urgency=high]
+border-color=#fab387
 
 # Borders
-border-size=10
-border-color=#c0caf5
-
+border-size=3
 # Dimensions
-width=250
-height=200
-padding=5, 5, 50, 50
+padding=5, 5, 5, 5
 
 # Icons
 icons=1
