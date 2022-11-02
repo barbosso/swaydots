@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:/var/lib/snapd/snap/bin:$PATH
-export EDITOR=nvim
+export EDITOR=micro
+export "MICRO_TRUECOLOR=1"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
