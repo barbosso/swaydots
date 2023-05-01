@@ -7,6 +7,8 @@ function status() {
     fi
 }
 
+# need add conection from nmcli
+# nmcli connection import type wireguard file wg0.conf
 function connect() {
     if [ "$(nmcli device status | grep wg0 | grep --only-matching 'connected')" == 'connected' ];then
         nmcli connection down WireGuard 1>/dev/null 2>&1
